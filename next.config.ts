@@ -8,7 +8,7 @@ const withSerwist = withSerwistInit({
 });
 
 const nextConfig: NextConfig = {
-  turbopack: {},
+  turbopack: {}, // silences webpack/turbopack conflict warning in dev
 };
 
 export default withSerwist(nextConfig);
