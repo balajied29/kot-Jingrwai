@@ -159,12 +159,16 @@ export default function SearchClient() {
 
       {/* ── Category pills ── */}
       {cats.length > 0 && (
-        <div className="scroll-x" style={{
+        <div style={{
+          display: 'flex', flexWrap: 'nowrap', gap: 8,
+          overflowX: 'auto', overflowY: 'visible',
+          WebkitOverflowScrolling: 'touch',
+          scrollbarWidth: 'none',
           flexShrink: 0,
           padding: '10px 14px',
           borderBottom: '1px solid var(--border)',
           background: 'var(--bg)',
-        }}>
+        } as React.CSSProperties}>
           {[ALL, ...cats].map(cat => {
             const active = activeCat === cat;
             return (

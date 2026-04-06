@@ -19,7 +19,13 @@ export default function HomeClient({ hymns, categories }: Props) {
   return (
     <div>
       {/* ── Category filter strip ── */}
-      <div className="scroll-x" style={{ padding: '10px 14px', borderBottom: '1px solid var(--border)' }}>
+      <div style={{
+        display: 'flex', flexWrap: 'nowrap', gap: 8,
+        overflowX: 'auto', overflowY: 'visible',
+        WebkitOverflowScrolling: 'touch',
+        scrollbarWidth: 'none',
+        padding: '10px 14px', borderBottom: '1px solid var(--border)',
+      } as React.CSSProperties}>
         <button
           onClick={() => setActiveCat(null)}
           style={{
